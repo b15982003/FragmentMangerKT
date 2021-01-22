@@ -15,13 +15,14 @@ import com.example.fragmentmangerkotlin.base.BaseActivity
 import com.example.fragmentmangerkotlin.bathroom.BathRoomFragment
 import com.example.fragmentmangerkotlin.home.HomeFragment
 import com.example.fragmentmangerkotlin.livingroom.LivinRoomFragment
+import com.example.fragmentmangerkotlin.util.LogUtils
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : BaseActivity(), MainView {
     @RequiresApi(Build.VERSION_CODES.O)
-    var model = MainModel()
+    var model = MainModel(this)
     var presenter : MainPresenter? = null
 
     // bottom Navigation 監聽
@@ -68,10 +69,11 @@ class MainActivity : BaseActivity(), MainView {
         return super.onCreateView(name, context, attrs)
     }
 
-    override fun setContentView(view: View?) {
-        super.setContentView(R.layout.activity_main)
+    override fun setContentView() {
+        LogUtils.d("push123")
+
         mainActivity_tsButton.setOnClickListener {
-            Log.d("Ray", "Toast")
+            LogUtils.d("push")
 //            showToast()
             showMsg()
         }

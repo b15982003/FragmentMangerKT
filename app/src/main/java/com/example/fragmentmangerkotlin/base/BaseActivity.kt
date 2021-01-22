@@ -9,10 +9,11 @@ import android.util.AttributeSet
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.FragmentActivity
 import com.example.fragmentmangerkotlin.MainActivity
 import com.example.fragmentmangerkotlin.util.LogUtils
 
-abstract class BaseActivity : AppCompatActivity(), BaseView {
+abstract class BaseActivity : FragmentActivity(), BaseView {
 
     override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
         super.onCreate(savedInstanceState, persistentState)
@@ -21,10 +22,6 @@ abstract class BaseActivity : AppCompatActivity(), BaseView {
 
     override fun onCreateView(name: String, context: Context, attrs: AttributeSet): View? {
         return super.onCreateView(name, context, attrs)
-    }
-
-    override fun setContentView() {
-//        TODO("Not yet implemented")
     }
 
     override fun showToast() {
