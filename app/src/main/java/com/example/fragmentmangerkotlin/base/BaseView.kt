@@ -1,7 +1,6 @@
 package com.example.fragmentmangerkotlin.base
 
 import android.content.Context
-import androidx.annotation.StringRes
 
 interface BaseView {
     fun showToast() // 系統 toast

@@ -1,5 +1,7 @@
 package com.example.fragmentmangerkotlin
 
+import android.app.Activity
+import android.app.Application
 import android.content.Context
 import android.graphics.Color
 import android.os.Build
@@ -72,11 +74,18 @@ class MainActivity : BaseActivity(), MainView {
     override fun setContentView() {
         LogUtils.d("push123")
 
-        mainActivity_tsButton.setOnClickListener {
+        mainActivity_btnToast.setOnClickListener {
             LogUtils.d("push")
 //            showToast()
-            showMsg()
+//            showMsg()
+            setScreenLightOrigin()
         }
+
+        mainActivity_btnLight.setOnClickListener {
+            setScreenLightMax()
+        }
+
+
     }
 
     private fun replaceFragment(fragment: Fragment) {
@@ -103,6 +112,6 @@ class MainActivity : BaseActivity(), MainView {
     }
 
     override fun onFirstStart() {
-        Log.d("Ray","onResume")
+        LogUtils.d("first doing")
     }
 }

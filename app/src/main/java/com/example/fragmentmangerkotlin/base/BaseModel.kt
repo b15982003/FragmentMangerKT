@@ -17,17 +17,4 @@ abstract class BaseModel(context: Context) {
         fun onNetworkFailed(sTag: String?) // 網路異常
 
     }
-
-    protected open fun BaseModel(context: Context) {
-//        context = context
-//        globalVariable = globalVariable
-        initial(context)
-    }
-
-
-
-    open fun initial(context: Context?) {
-        if (null != context) {
-        }
-    }
 }
