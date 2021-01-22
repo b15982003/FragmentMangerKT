@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navigation_a"
+        android:icon="@drawable/selector_bottom_a"
+        android:title="A" />
+
+    <item
+        android:id="@+id/navigation_f"
+        android:icon="@drawable/selector_bottom_f"
+        android:title="F" />
+
+    <item
+        android:id="@+id/navigation_p"
+        android:icon="@drawable/selector_bottom_p"
+        android:title="P" />
+
+
+</menu>
